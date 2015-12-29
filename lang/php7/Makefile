@@ -2,13 +2,13 @@
 # $FreeBSD: head/lang/php7/Makefile 402669 2015-11-30 14:05:47Z ale $
 
 PORTNAME=	php7
-PORTVERSION=	7.0.0
+PORTVERSION=	7.0.1
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
 DISTNAME=	php-${PORTVERSION}
 
-MAINTAINER=	ale@FreeBSD.org
+MAINTAINER=	max@senta.pro
 COMMENT=	PHP Scripting Language
 
 LICENSE=	PHP301
@@ -23,7 +23,7 @@ LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 
 CONFIGURE_ARGS+=--with-layout=GNU \
 		--localstatedir=/var \
-		--with-config-file-scan-dir=${PREFIX}/etc/php \
+		--with-config-file-scan-dir=${PREFIX}/etc/php7 \
 		--disable-all \
 		--enable-libxml \
 		--enable-mysqlnd \
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=--with-layout=GNU \
 
 USE_GNOME=	libxml2
 
-OPTIONS_DEFINE+=CLI CGI FPM EMBED PHPDBG DEBUG DTRACE IPV6 LINKTHR
+OPTIONS_DEFINE+=CLI CGI FPM EMBED PHPDBG DEBUG DTRACE IPV6 LINKTHR ZTS
 OPTIONS_DEFAULT=CLI CGI FPM IPV6 LINKTHR
 # Bug 197128:  No ASM code for MIPS/MIPS64, disable FPM
 OPTIONS_EXCLUDE_mips=FPM
@@ -48,9 +48,8 @@ EMBED_DESC=	Build embedded library
 DEBUG_DESC=	Enable debug
 DTRACE_DESC=	Enable DTrace support
 IPV6_DESC=	Enable ipv6 support
-#MAILHEAD_DESC=	Enable mail header patch
 LINKTHR_DESC=	Link thread lib (for threaded extensions)
-#ZTS_DESC=	Force Zend Thread Safety (ZTS) build
+ZTS_DESC=	Force Zend Thread Safety (ZTS) build
 
 CONFLICTS=	php53-5* php54-5* php55-5*i php56-* php5-5*
 
@@ -61,11 +60,6 @@ DESTDIRNAME=	INSTALL_ROOT
 PATCH_DIST_STRIP=	-p1
 
 PATCH_SITES+=	LOCAL/ale
-
-#.if ${PORT_OPTIONS:MMAILHEAD}
-#PATCHFILES+=	php-5.5.x-mail-header.patch:mail
-#PATCH_SITES+=	http://choon.net/opensource/php/:mail
-#.endif
 
 .if ${PORT_OPTIONS:MCLI}
 PHP_SAPI+=	cli
