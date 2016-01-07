@@ -2,7 +2,7 @@
 # $FreeBSD: head/lang/php7/Makefile 402669 2015-11-30 14:05:47Z ale $
 
 PORTNAME=	php7
-PORTVERSION=	7.0.1
+PORTVERSION=	7.0.2
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
@@ -23,7 +23,7 @@ LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 
 CONFIGURE_ARGS+=--with-layout=GNU \
 		--localstatedir=/var \
-		--with-config-file-scan-dir=${PREFIX}/etc/php7 \
+		--with-config-file-scan-dir=${PREFIX}/etc/php \
 		--disable-all \
 		--enable-libxml \
 		--enable-mysqlnd \
