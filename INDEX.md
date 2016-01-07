@@ -1,0 +1,27 @@
+Ports index
+===========
+
+archivers/php7-bz2  
+archivers/php7-phar  
+converters/php7-iconv  
+databases/php7-mysqli  
+databases/php7-pgsql  
+databases/php7-sqlite3  
+devel/php-xdebug  
+devel/php7-json  
+devel/php7-mbstring  
+ftp/php7-curl  
+lang/php7  
+lang/php7-extensions  
+security/php7-filter  
+security/php7-hash  
+security/php7-mcrypt  
+security/php7-openssl  
+sysutils/php7-fileinfo  
+sysutils/php7-posix  
+textproc/php7-ctype  
+textproc/php7-dom  
+textproc/php7-simplexml  
+textproc/php7-xml  
+textproc/php7-xmlreader  
+textproc/php7-xmlwriter  
