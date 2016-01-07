@@ -12,7 +12,7 @@ etc/php.ini-production
 %%FPM%%@exec cp -n %D/%F %B/php-fpm.conf
 %%FPM%%@unexec if cmp -s %D/etc/php-fpm.d/www.conf %D/etc/php-fpm.d/www.conf.default; then rm -f %D/etc/php-fpm.d/www.conf; fi
 %%FPM%%etc/php-fpm.d/www.conf.default
-%%FPM%%@exec cp -n %D/%F %B/www.conf 
+%%FPM%%@exec cp -n %D/%F %B/www.conf
 include/php/TSRM/TSRM.h
 include/php/TSRM/readdir.h
 include/php/TSRM/tsrm_config.h
@@ -27,6 +27,7 @@ include/php/Zend/zend_alloc.h
 include/php/Zend/zend_alloc_sizes.h
 include/php/Zend/zend_arena.h
 include/php/Zend/zend_ast.h
+include/php/Zend/zend_bitset.h
 include/php/Zend/zend_build.h
 include/php/Zend/zend_builtin_functions.h
 include/php/Zend/zend_closures.h
@@ -48,6 +49,7 @@ include/php/Zend/zend_globals.h
 include/php/Zend/zend_globals_macros.h
 include/php/Zend/zend_hash.h
 include/php/Zend/zend_highlight.h
+include/php/Zend/zend_inheritance.h
 include/php/Zend/zend_ini.h
 include/php/Zend/zend_ini_parser.h
 include/php/Zend/zend_ini_scanner.h
@@ -79,6 +81,7 @@ include/php/Zend/zend_stack.h
 include/php/Zend/zend_stream.h
 include/php/Zend/zend_string.h
 include/php/Zend/zend_strtod.h
+include/php/Zend/zend_strtod_int.h
 include/php/Zend/zend_ts_hash.h
 include/php/Zend/zend_types.h
 include/php/Zend/zend_variables.h
@@ -171,6 +174,8 @@ include/php/ext/standard/php_metaphone.h
 include/php/ext/standard/php_password.h
 include/php/ext/standard/php_rand.h
 include/php/ext/standard/php_random.h
+include/php/ext/standard/php_smart_string.h
+include/php/ext/standard/php_smart_string_public.h
 include/php/ext/standard/php_standard.h
 include/php/ext/standard/php_string.h
 include/php/ext/standard/php_type.h
@@ -190,7 +195,9 @@ include/php/ext/standard/winver.h
 @unexec [ -s %D/include/php/ext/php_config.h ] || rm %D/include/php/ext/php_config.h
 include/php/main/SAPI.h
 include/php/main/build-defs.h
+include/php/main/fastcgi.h
 include/php/main/fopen_wrappers.h
+include/php/main/http_status_codes.h
 include/php/main/php.h
 include/php/main/php_compat.h
 include/php/main/php_config.h
@@ -218,10 +225,10 @@ include/php/main/streams/php_stream_context.h
 include/php/main/streams/php_stream_filter_api.h
 include/php/main/streams/php_stream_glob_wrapper.h
 include/php/main/streams/php_stream_mmap.h
-include/php/main/streams/php_streams_int.h
+include/php/main/streams/php_stream_plain_wrapper.h
 include/php/main/streams/php_stream_transport.h
 include/php/main/streams/php_stream_userspace.h
-include/php/main/streams/php_stream_plain_wrapper.h
+include/php/main/streams/php_streams_int.h
 %%CLI%%include/php/sapi/cli/cli.h
 %%EMBED%%include/php/sapi/embed/php_embed.h
 include/php/main/win95nt.h
