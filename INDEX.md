@@ -3,7 +3,11 @@ Ports index
 
 archivers/php7-bz2  
 archivers/php7-phar  
+archivers/php56-zip  
+archivers/php56-zlib  
 converters/php7-iconv  
+converters/php56-mbstring  
+converters/php56-recode  
 databases/php7-mysqli  
 databases/php7-pgsql  
 databases/php7-sqlite3  
