@@ -8,7 +8,17 @@ archivers/php56-zlib
 converters/php7-iconv  
 converters/php56-mbstring  
 converters/php56-recode  
+databases/php7-dba  
+databases/php7-interbase  
 databases/php7-mysqli  
+databases/php7-odbc  
+databases/php7-pdo  
+databases/php7-pdo_dblib  
+databases/php7-pdo_firebird  
+databases/php7-pdo_mysql  
+databases/php7-pdo_odbc  
+databases/php7-pdo_pgsql  
+databases/php7-pdo_sqlite  
 databases/php7-pgsql  
 databases/php7-sqlite3  
 devel/php-xdebug  
