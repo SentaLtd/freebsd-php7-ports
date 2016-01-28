@@ -2,8 +2,8 @@
 # $FreeBSD: head/devel/php-xdebug/Makefile 375249 2014-12-22 17:12:26Z feld $
 
 PORTNAME=	xdebug
-PORTVERSION=	2.4.0rc3
-WRKSRC=      	${WRKDIR}/xdebug-2.4.0RC3
+PORTVERSION=	2.4.0rc4
+WRKSRC=      	${WRKDIR}/xdebug-2.4.0RC4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.xdebug.org/files/
 PKGNAMEPREFIX=	php-

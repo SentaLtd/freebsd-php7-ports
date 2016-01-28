@@ -8,7 +8,7 @@ Enjoy.
 
 Versions:  
 php - 7.0.2  
-php-xdebug - 2.4.0RC3  
+php-xdebug - 2.4.0RC4
 
 See list of ports: [ports index](INDEX.md)
 
